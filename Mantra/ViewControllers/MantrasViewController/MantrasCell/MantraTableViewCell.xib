@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="184" id="KGk-i7-Jjw" customClass="MantraTableViewCell" customModule="Mantra" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="370"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="370"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mantra-Om" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-Nr-7tc">
+                        <rect key="frame" x="0.0" y="0.0" width="351" height="231"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="231" id="7Sn-qu-uRm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-mN-jjG">
+                        <rect key="frame" x="0.0" y="231" width="351" height="139"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Vue-Nr-7tc" secondAttribute="trailing" id="5uR-vp-sAl"/>
+                    <constraint firstItem="r5I-mN-jjG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7lJ-UB-mVz"/>
+                    <constraint firstItem="r5I-mN-jjG" firstAttribute="top" secondItem="Vue-Nr-7tc" secondAttribute="bottom" id="N96-ta-zWP"/>
+                    <constraint firstItem="Vue-Nr-7tc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Tr4-Da-dec"/>
+                    <constraint firstAttribute="trailing" secondItem="Vue-Nr-7tc" secondAttribute="trailing" id="Uls-1b-eMQ"/>
+                    <constraint firstAttribute="trailing" secondItem="r5I-mN-jjG" secondAttribute="trailing" id="UxB-0I-2Wy"/>
+                    <constraint firstAttribute="bottom" secondItem="r5I-mN-jjG" secondAttribute="bottom" id="VL3-Io-ytv"/>
+                    <constraint firstItem="Vue-Nr-7tc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bLT-Uy-KnF"/>
+                    <constraint firstItem="Vue-Nr-7tc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sDW-Ol-lHW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mantraImage" destination="Vue-Nr-7tc" id="zfd-Mm-ZBN"/>
+                <outlet property="mantraTitleText" destination="r5I-mN-jjG" id="FSw-8c-24i"/>
+            </connections>
+            <point key="canvasLocation" x="123.91304347826087" y="114.50892857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Mantra-Om" width="850" height="474"/>
+    </resources>
+</document>

@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		3B03613F26F759B5001DB17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03613E26F759B5001DB17B /* AppDelegate.swift */; };
 		3B03614126F759B5001DB17B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03614026F759B5001DB17B /* SceneDelegate.swift */; };
-		3B03614326F759B5001DB17B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03614226F759B5001DB17B /* ViewController.swift */; };
+		3B03614326F759B5001DB17B /* MantrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03614226F759B5001DB17B /* MantrasViewController.swift */; };
 		3B03614626F759B5001DB17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B03614426F759B5001DB17B /* Main.storyboard */; };
 		3B03614826F759BD001DB17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B03614726F759BD001DB17B /* Assets.xcassets */; };
 		3B03614B26F759BD001DB17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B03614926F759BD001DB17B /* LaunchScreen.storyboard */; };
 		3B03615626F759BD001DB17B /* MantraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03615526F759BD001DB17B /* MantraTests.swift */; };
 		3B03616126F759BD001DB17B /* MantraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03616026F759BD001DB17B /* MantraUITests.swift */; };
+		3B03617226F77F4D001DB17B /* MantraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03617026F77F4D001DB17B /* MantraTableViewCell.swift */; };
+		3B03617326F77F4D001DB17B /* MantraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B03617126F77F4D001DB17B /* MantraTableViewCell.xib */; };
+		3B03617526F9F2FA001DB17B /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03617426F9F2FA001DB17B /* QuestionsViewController.swift */; };
+		3B03617A26FA198D001DB17B /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03617826FA198D001DB17B /* QuestionsTableViewCell.swift */; };
+		3B03617B26FA198D001DB17B /* QuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B03617926FA198D001DB17B /* QuestionsTableViewCell.xib */; };
+		3B03617D26FB0A94001DB17B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03617C26FB0A93001DB17B /* StartScreenViewController.swift */; };
+		3B03618026FB2EC3001DB17B /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03617F26FB2EC3001DB17B /* SubscriptionViewController.swift */; };
+		3B1F037C270123A300CC28F6 /* MantrasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F037B270123A300CC28F6 /* MantrasModel.swift */; };
+		3B1F037E27012E3700CC28F6 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F037D27012E3700CC28F6 /* QuestionsModel.swift */; };
+		3BE55E0226FDC130006668FE /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE55E0126FDC130006668FE /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +48,7 @@
 		3B03613B26F759B5001DB17B /* Mantra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mantra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B03613E26F759B5001DB17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B03614026F759B5001DB17B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B03614226F759B5001DB17B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B03614226F759B5001DB17B /* MantrasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantrasViewController.swift; sourceTree = "<group>"; };
 		3B03614526F759B5001DB17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B03614726F759BD001DB17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B03614A26F759BD001DB17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,17 @@
 		3B03615C26F759BD001DB17B /* MantraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MantraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B03616026F759BD001DB17B /* MantraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantraUITests.swift; sourceTree = "<group>"; };
 		3B03616226F759BD001DB17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B03617026F77F4D001DB17B /* MantraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantraTableViewCell.swift; sourceTree = "<group>"; };
+		3B03617126F77F4D001DB17B /* MantraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MantraTableViewCell.xib; sourceTree = "<group>"; };
+		3B03617426F9F2FA001DB17B /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		3B03617826FA198D001DB17B /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
+		3B03617926FA198D001DB17B /* QuestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsTableViewCell.xib; sourceTree = "<group>"; };
+		3B03617C26FB0A93001DB17B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		3B03617F26FB2EC3001DB17B /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		3B1F037B270123A300CC28F6 /* MantrasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantrasModel.swift; sourceTree = "<group>"; };
+		3B1F037D27012E3700CC28F6 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
+		3B1F037F2701E95100CC28F6 /* Mantra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mantra.entitlements; sourceTree = "<group>"; };
+		3BE55E0126FDC130006668FE /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +120,12 @@
 		3B03613D26F759B5001DB17B /* Mantra */ = {
 			isa = PBXGroup;
 			children = (
-				3B03613E26F759B5001DB17B /* AppDelegate.swift */,
-				3B03614026F759B5001DB17B /* SceneDelegate.swift */,
-				3B03614226F759B5001DB17B /* ViewController.swift */,
-				3B03614426F759B5001DB17B /* Main.storyboard */,
-				3B03614726F759BD001DB17B /* Assets.xcassets */,
-				3B03614926F759BD001DB17B /* LaunchScreen.storyboard */,
-				3B03614C26F759BD001DB17B /* Info.plist */,
+				3B1F037F2701E95100CC28F6 /* Mantra.entitlements */,
+				3BC2B3BE27049C5A00137384 /* Resources */,
+				3BC2B3BD27049BD800137384 /* LaunchFiles */,
+				3B1F037A2701237B00CC28F6 /* Model */,
+				3B03617E26FB1863001DB17B /* Storyboards */,
+				3B03616E26F7766F001DB17B /* ViewControllers */,
 			);
 			path = Mantra;
 			sourceTree = "<group>";
@@ -126,6 +146,90 @@
 				3B03616226F759BD001DB17B /* Info.plist */,
 			);
 			path = MantraUITests;
+			sourceTree = "<group>";
+		};
+		3B03616E26F7766F001DB17B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2B3BC27049B5E00137384 /* MantrasViewController */,
+				3BC2B3BB27049AFB00137384 /* QuestionsViewController */,
+				3B03617C26FB0A93001DB17B /* StartScreenViewController.swift */,
+				3B03617F26FB2EC3001DB17B /* SubscriptionViewController.swift */,
+				3BE55E0126FDC130006668FE /* DescriptionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3B03617626FA1946001DB17B /* MantrasCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B03617026F77F4D001DB17B /* MantraTableViewCell.swift */,
+				3B03617126F77F4D001DB17B /* MantraTableViewCell.xib */,
+			);
+			path = MantrasCell;
+			sourceTree = "<group>";
+		};
+		3B03617726FA195C001DB17B /* QuestionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B03617826FA198D001DB17B /* QuestionsTableViewCell.swift */,
+				3B03617926FA198D001DB17B /* QuestionsTableViewCell.xib */,
+			);
+			path = QuestionsCell;
+			sourceTree = "<group>";
+		};
+		3B03617E26FB1863001DB17B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3B03614426F759B5001DB17B /* Main.storyboard */,
+				3B03614926F759BD001DB17B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3B1F037A2701237B00CC28F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F037B270123A300CC28F6 /* MantrasModel.swift */,
+				3B1F037D27012E3700CC28F6 /* QuestionsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BC2B3BB27049AFB00137384 /* QuestionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B03617726FA195C001DB17B /* QuestionsCell */,
+				3B03617426F9F2FA001DB17B /* QuestionsViewController.swift */,
+			);
+			path = QuestionsViewController;
+			sourceTree = "<group>";
+		};
+		3BC2B3BC27049B5E00137384 /* MantrasViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B03617626FA1946001DB17B /* MantrasCell */,
+				3B03614226F759B5001DB17B /* MantrasViewController.swift */,
+			);
+			path = MantrasViewController;
+			sourceTree = "<group>";
+		};
+		3BC2B3BD27049BD800137384 /* LaunchFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3B03613E26F759B5001DB17B /* AppDelegate.swift */,
+				3B03614026F759B5001DB17B /* SceneDelegate.swift */,
+			);
+			path = LaunchFiles;
+			sourceTree = "<group>";
+		};
+		3BC2B3BE27049C5A00137384 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B03614726F759BD001DB17B /* Assets.xcassets */,
+				3B03614C26F759BD001DB17B /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B03614B26F759BD001DB17B /* LaunchScreen.storyboard in Resources */,
+				3B03617326F77F4D001DB17B /* MantraTableViewCell.xib in Resources */,
 				3B03614826F759BD001DB17B /* Assets.xcassets in Resources */,
 				3B03614626F759B5001DB17B /* Main.storyboard in Resources */,
+				3B03617B26FA198D001DB17B /* QuestionsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B03614326F759B5001DB17B /* ViewController.swift in Sources */,
+				3B03617D26FB0A94001DB17B /* StartScreenViewController.swift in Sources */,
+				3B03614326F759B5001DB17B /* MantrasViewController.swift in Sources */,
+				3B1F037C270123A300CC28F6 /* MantrasModel.swift in Sources */,
+				3B03617526F9F2FA001DB17B /* QuestionsViewController.swift in Sources */,
+				3B03617226F77F4D001DB17B /* MantraTableViewCell.swift in Sources */,
 				3B03613F26F759B5001DB17B /* AppDelegate.swift in Sources */,
 				3B03614126F759B5001DB17B /* SceneDelegate.swift in Sources */,
+				3B1F037E27012E3700CC28F6 /* QuestionsModel.swift in Sources */,
+				3BE55E0226FDC130006668FE /* DescriptionViewController.swift in Sources */,
+				3B03618026FB2EC3001DB17B /* SubscriptionViewController.swift in Sources */,
+				3B03617A26FA198D001DB17B /* QuestionsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +550,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mantra/Mantra.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Mantra/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Mantra/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dmitry.com.Mantra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mantra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,14 +572,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mantra/Mantra.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Mantra/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Mantra/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dmitry.com.Mantra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mantra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
