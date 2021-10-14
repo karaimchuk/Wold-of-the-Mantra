@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,21 +31,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idY-Uz-jyB">
+                        <rect key="frame" x="0.0" y="0.5" width="351" height="368.5"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                        <imageReference key="image" image="lock" catalog="system" symbolScale="medium"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Vue-Nr-7tc" secondAttribute="trailing" id="5uR-vp-sAl"/>
                     <constraint firstItem="r5I-mN-jjG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7lJ-UB-mVz"/>
+                    <constraint firstAttribute="bottom" secondItem="idY-Uz-jyB" secondAttribute="bottom" id="HKX-EU-fow"/>
                     <constraint firstItem="r5I-mN-jjG" firstAttribute="top" secondItem="Vue-Nr-7tc" secondAttribute="bottom" id="N96-ta-zWP"/>
                     <constraint firstItem="Vue-Nr-7tc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Tr4-Da-dec"/>
                     <constraint firstAttribute="trailing" secondItem="Vue-Nr-7tc" secondAttribute="trailing" id="Uls-1b-eMQ"/>
                     <constraint firstAttribute="trailing" secondItem="r5I-mN-jjG" secondAttribute="trailing" id="UxB-0I-2Wy"/>
                     <constraint firstAttribute="bottom" secondItem="r5I-mN-jjG" secondAttribute="bottom" id="VL3-Io-ytv"/>
                     <constraint firstItem="Vue-Nr-7tc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bLT-Uy-KnF"/>
+                    <constraint firstItem="idY-Uz-jyB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r92-iu-6WF"/>
                     <constraint firstItem="Vue-Nr-7tc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sDW-Ol-lHW"/>
+                    <constraint firstItem="idY-Uz-jyB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sej-cX-Z65"/>
+                    <constraint firstAttribute="trailing" secondItem="idY-Uz-jyB" secondAttribute="trailing" id="ydV-e3-eJG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lockImage" destination="idY-Uz-jyB" id="O7H-u5-kda"/>
                 <outlet property="mantraImage" destination="Vue-Nr-7tc" id="zfd-Mm-ZBN"/>
                 <outlet property="mantraTitleText" destination="r5I-mN-jjG" id="FSw-8c-24i"/>
             </connections>
@@ -51,5 +65,12 @@
     </objects>
     <resources>
         <image name="Mantra-Om" width="850" height="474"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

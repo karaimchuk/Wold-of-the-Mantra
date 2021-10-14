@@ -9,9 +9,9 @@ import UIKit
 
 class MantrasViewController: UIViewController {
   
-  @IBOutlet weak private var tableView: UITableView!
+  @IBOutlet weak public var tableView: UITableView!
   private let mantrasModel = MantrasModel()
-    
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -35,13 +35,22 @@ class MantrasViewController: UIViewController {
 
 extension MantrasViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    let vc = storyboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
-    vc.mantraTextArr = mantrasModel.mantraTextArr[indexPath.section]
-    vc.mantraImageArr = mantrasModel.mantraImageArr[indexPath.section]
-    navigationController?.pushViewController(vc, animated: true)
+    
+    let navController = self.tabBarController?.viewControllers?[2] as? UINavigationController
+    let subscriptionVC = navController?.topViewController as? SubscriptionViewController
+    
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+    let descriptionVC = mainStoryboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+    
+    descriptionVC.mantraTextArr = mantrasModel.mantraTextArr[indexPath.section]
+    descriptionVC.mantraImageArr = mantrasModel.mantraImageArr[indexPath.section]
+    
+    if indexPath.section == 0 {
+      navigationController?.pushViewController(descriptionVC, animated: true)
+    } else if subscriptionVC?.isPaid == true {
+      navigationController?.pushViewController(descriptionVC, animated: true)
+    }
   }
-  
 }
 
 extension MantrasViewController: UITableViewDataSource {
@@ -74,8 +83,19 @@ extension MantrasViewController: UITableViewDataSource {
     mantraCell.layer.cornerRadius = 10
     mantraCell.layer.borderWidth = 1
     mantraCell.layer.borderColor = UIColor.lightGray.cgColor
-        
+    
     mantraCell.configureCellElements(mantraImageArr: mantrasModel.mantraImageArr[indexPath.section], mantraTitleTextArr: mantrasModel.mantraTitleArr[indexPath.section])
+    
+    mantraCell.lockImage.alpha = 0.55
+    
+    let navController = self.tabBarController?.viewControllers?[2] as? UINavigationController
+    let subscriptionVC = navController?.topViewController as? SubscriptionViewController
+    
+    if indexPath.section == 0 {
+      mantraCell.lockImage.alpha = 0
+    } else if subscriptionVC?.isPaid == true {
+      mantraCell.lockImage.alpha = 0
+    }
     
     return mantraCell
   }
