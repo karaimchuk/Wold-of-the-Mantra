@@ -22,6 +22,7 @@ class StartScreenViewController: UIViewController {
   @IBAction func didTapButton() {
     let vc = storyboard?.instantiateViewController(identifier: "MantraTabBar") as! UITabBarController
     vc.modalPresentationStyle = .fullScreen
+    vc.selectedIndex = 1
     present(vc, animated: true, completion: nil)
   }
   

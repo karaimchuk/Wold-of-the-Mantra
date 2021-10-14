@@ -12,6 +12,8 @@ class SubscriptionViewController: UIViewController {
   @IBOutlet weak private var applePayButton: UIButton!
   @IBOutlet weak private var informLabel: UILabel!
   
+  public var isPaid = false
+    
   private var paymentRequest: PKPaymentRequest = {
     let request = PKPaymentRequest()
     request.merchantIdentifier = "mantra.com"
@@ -42,6 +44,11 @@ class SubscriptionViewController: UIViewController {
       controller!.delegate = self
       present(controller!, animated: true) {
         print("Complete")
+        self.isPaid = true
+        
+        let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController
+        let mantrasVC = navController?.topViewController as? MantrasViewController
+        mantrasVC?.tableView.reloadData()
       }
     }
   }
