@@ -43,7 +43,6 @@ class SubscriptionViewController: UIViewController {
     if controller != nil {
       controller!.delegate = self
       present(controller!, animated: true) {
-        print("Complete")
         self.isPaid = true
         
         let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController

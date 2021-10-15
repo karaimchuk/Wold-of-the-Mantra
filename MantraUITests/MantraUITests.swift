@@ -30,19 +30,23 @@ class MantraUITests: XCTestCase {
     app.buttons["Join to the World of Mantra"].tap()
     
     let tablesQuery = app.tables
+    app.tabBars["Tab Bar"].buttons["Questions"].tap()
     tablesQuery.staticTexts["What is a mantra?"].tap()
     tablesQuery.staticTexts["What is the power of a mantra?"].tap()
     
     app.tabBars["Tab Bar"].buttons["Mantras"].tap()
-    
     app.staticTexts["Mantra Om"].tap()
-    app.navigationBars["Mantra.DescriptionView"].buttons["Mantras"].tap()
-    
-    app.staticTexts["Gayatri Mantra"].tap()
     app.navigationBars["Mantra.DescriptionView"].buttons["Mantras"].tap()
     
     app.tabBars["Tab Bar"].buttons["Subscription"].tap()
     app.buttons["Pay with Pay"].tap()
+    let applePay = XCUIApplication(bundleIdentifier: "com.apple.PassbookUIService")
+    _ = applePay.wait(for: .runningForeground, timeout: 5)
+    applePay.buttons["close"].tap()
+    
+    app.tabBars["Tab Bar"].buttons["Mantras"].tap()
+    app.staticTexts["Gayatri Mantra"].tap()
+    app.navigationBars["Mantra.DescriptionView"].buttons["Mantras"].tap()
   }
   
   func testLaunchPerformance() throws {
